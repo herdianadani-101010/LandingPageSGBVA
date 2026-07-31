@@ -1,0 +1,21 @@
+# Configuration with secrets
+js/config.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Dependencies (safety net)
+node_modules/
+
+# Build output (safety net)
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
