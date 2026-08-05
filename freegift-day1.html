@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGBVA Free Gift — VA Career Readiness Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { heading: ['"Plus Jakarta Sans"', 'sans-serif'], body: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#FEF2F2',100:'#FFE9EB',200:'#FBE1E1',300:'#E4C7D1',400:'#C2185B',500:'#980F45',600:'#8B1238',700:'#6F1231',800:'#5B001F',900:'#4F071E' },
+            accent: { 50:'#FFFDF5',100:'#FFF1B8',200:'#FFD465',300:'#FEC43B',400:'#FCBE41',500:'#F4B73B',600:'#D4961A',700:'#B87D14' },
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .countdown-box {
+      background: linear-gradient(135deg, #F4B73B 0%, #D4961A 100%);
+      border-radius: 12px;
+      min-width: 70px;
+      padding: 12px 16px;
+      box-shadow: 0 4px 12px rgba(244, 183, 59, 0.3);
+    }
+    .card-premium {
+      background: #FDFBF9;
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+    .badge-gift {
+      background: linear-gradient(135deg, #F4B73B 0%, #FEC43B 100%);
+      color: #4F071E;
+      border-radius: 999px;
+      padding: 6px 18px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-block;
+      box-shadow: 0 2px 8px rgba(244, 183, 59, 0.3);
+    }
+    .btn-gift {
+      background: linear-gradient(135deg, #F4B73B 0%, #FEC43B 100%);
+      color: #4F071E;
+      border-radius: 12px;
+      padding: 14px 32px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(244, 183, 59, 0.4);
+    }
+    .btn-gift:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(244, 183, 59, 0.5);
+    }
+    .lock-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #E4C7D1 0%, #C2185B 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(194, 24, 91, 0.3);
+    }
+    .contains-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .contains-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #F4B73B;
+      font-weight: 700;
+    }
+    .warm-gradient {
+      background: linear-gradient(180deg, #4F071E 0%, #6F1231 50%, #4F071E 100%);
+    }
+  </style>
+</head>
+<body class="font-body bg-[#4F071E] min-h-screen flex items-center justify-center antialiased warm-gradient">
+
+  <!-- STATE 1: Not Registered -->
+  <div id="state-not-registered" class="hidden px-4 py-12">
+    <div class="card-premium max-w-md w-full p-10 text-center">
+      <div class="lock-icon mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      </div>
+      <h2 class="font-heading font-bold text-brand-900 text-xl mb-3">Akses Dibatasi</h2>
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        Silakan daftar terlebih dahulu untuk mengakses free gift ini.
+      </p>
+      <a href="index-dani.html" class="btn-gift inline-block text-center">
+        Kembali ke Halaman Pendaftaran
+      </a>
+    </div>
+  </div>
+
+  <!-- STATE 2: Registered but Locked -->
+  <div id="state-locked" class="hidden px-4 py-12">
+    <div class="card-premium max-w-lg w-full p-10 text-center">
+      <div class="lock-icon mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      </div>
+      <h2 class="font-heading font-bold text-brand-900 text-xl mb-2">
+        Free Gift VA Career Readiness Assessment belum tersedia
+      </h2>
+      <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+        Free gift akan terbuka pada pukul <span class="font-semibold text-brand-400">21:00 - 23:59 WIB</span> setelah webinar selesai.
+      </p>
+
+      <!-- Countdown -->
+      <div class="flex justify-center gap-3 mb-8">
+        <div class="countdown-box text-center">
+          <div id="countdown-hours" class="text-white font-heading font-bold text-2xl">00</div>
+          <div class="text-brand-900 text-xs font-semibold uppercase tracking-wider mt-1">Jam</div>
+        </div>
+        <div class="text-accent-500 font-heading font-bold text-2xl self-center mt-[-12px]">:</div>
+        <div class="countdown-box text-center">
+          <div id="countdown-minutes" class="text-white font-heading font-bold text-2xl">00</div>
+          <div class="text-brand-900 text-xs font-semibold uppercase tracking-wider mt-1">Menit</div>
+        </div>
+        <div class="text-accent-500 font-heading font-bold text-2xl self-center mt-[-12px]">:</div>
+        <div class="countdown-box text-center">
+          <div id="countdown-seconds" class="text-white font-heading font-bold text-2xl">00</div>
+          <div class="text-brand-900 text-xs font-semibold uppercase tracking-wider mt-1">Detik</div>
+        </div>
+      </div>
+
+      <div class="bg-accent-50 border border-accent-100 rounded-xl p-4">
+        <p class="text-brand-800 text-sm">
+          Tetap pantau halaman ini. Free gift akan terbuka otomatis.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATE 3a: Assessment Not Completed -->
+  <div id="state-assessment" class="hidden px-4 py-12">
+    <div class="card-premium max-w-lg w-full p-10 text-center">
+      <span class="badge-gift mb-4 inline-block">Free Gift Hari 1</span>
+      <div class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-5">
+        <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>
+      </div>
+      <h2 class="font-heading font-bold text-brand-900 text-xl mb-3">Selesaikan Assessment Dulu</h2>
+      <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+        Untuk mendapatkan free gift, Anda perlu menyelesaikan <strong>VA Career Readiness Assessment</strong> terlebih dahulu. Hanya butuh ±5 menit.
+      </p>
+      <div class="bg-accent-50 border border-accent-100 rounded-xl p-4 mb-6 text-left">
+        <p class="text-sm text-brand-800"><strong>🎁 Free Gift Hari 1:</strong></p>
+        <ul class="text-sm text-gray-600 mt-2 space-y-1">
+          <li>✓ AI Prompt Pack — prompt siap pakai untuk VA</li>
+          <li>✓ Google Workspace Cheat Sheet — referensi cepat</li>
+        </ul>
+      </div>
+      <button onclick="startInlineAssessment()" class="btn-gift inline-block text-center w-full">
+        Mulai Assessment →
+      </button>
+    </div>
+  </div>
+
+  <!-- STATE 3b: Free Gift Unlocked -->
+  <div id="state-gifts" class="hidden px-4 py-12">
+    <div class="card-premium max-w-lg w-full p-10">
+      <div class="text-center mb-8">
+        <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <span class="badge-gift inline-block mb-3">Free Gift Hari 1</span>
+        <h2 class="font-heading font-bold text-brand-900 text-xl mb-2">Selamat! Free Gift Terbuka</h2>
+        <p class="text-gray-600 text-sm">Assessment sudah selesai. Berikut free gift Anda:</p>
+      </div>
+
+      <!-- Assessment Summary -->
+      <div class="bg-[#FEF2F2] rounded-xl p-4 mb-6">
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold text-brand-800">Skor Assessment</span>
+          <span class="text-sm font-bold text-brand-600" id="gift-score">-</span>
+        </div>
+        <div class="flex items-center justify-between mt-1">
+          <span class="text-sm text-gray-500">Level Kesiapan</span>
+          <span class="text-sm font-bold" id="gift-level">-</span>
+        </div>
+      </div>
+
+      <!-- Gift 1: AI Prompt Pack -->
+      <div class="bg-white rounded-xl p-5 border border-[#E4C7D1]/30 mb-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-semibold text-slate-900 text-sm">AI Prompt Pack</h3>
+            <p class="text-xs text-gray-500">Prompt AI siap pakai untuk membantu pekerjaan VA</p>
+          </div>
+          <a href="#" onclick="if(typeof SGBVA_REG!=='undefined')SGBVA_REG.trackDownload('AI Prompt Pack',1)" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg transition-colors" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <!-- Gift 2: Google Workspace Cheat Sheet -->
+      <div class="bg-white rounded-xl p-5 border border-[#E4C7D1]/30 mb-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-semibold text-slate-900 text-sm">Google Workspace Cheat Sheet</h3>
+            <p class="text-xs text-gray-500">Referensi cepat fitur Google Workspace untuk VA</p>
+          </div>
+          <a href="#" onclick="if(typeof SGBVA_REG!=='undefined')SGBVA_REG.trackDownload('Google Workspace Cheat Sheet',1)" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg transition-colors" target="_blank">Download</a>
+        </div>
+      </div>
+
+      <!-- Bridge to Day 2 -->
+      <div class="bg-accent-50 border border-accent-100 rounded-xl p-4 text-center mb-6">
+        <p class="text-sm text-brand-800 font-medium">📅 Day 2 akan dibuka besok (8 Agustus 2026)</p>
+        <p class="text-xs text-gray-500 mt-1">Siapkan diri untuk belajar standar klien global!</p>
+      </div>
+
+      <div class="text-center border-t border-gray-100 pt-6">
+        <a href="index-dani.html" class="text-brand-400 text-sm font-medium hover:text-brand-500 transition-colors">
+          Kembali ke halaman utama
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="registration.js"></script>
+  <script>
+    const DAY_NUM = 1;
+    const GIFT_NAME = 'AI Prompt Pack + Google Workspace Cheat Sheet';
+    const LANDING_PAGE = 'index-dani.html';
+
+    function checkAccess() {
+      const now = new Date();
+      const wibStr = now.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'});
+      const wib = new Date(wibStr);
+      const year = wib.getFullYear();
+      const month = wib.getMonth(); // 0-indexed
+      const day = wib.getDate();
+      const hour = wib.getHours();
+      const registered = localStorage.getItem('sgbva_registered_email');
+
+      if (!registered) return 'not_registered';
+
+      // Webinar Day 1: 7 Agustus 2026, 19:00-21:00 WIB
+      // Free gift buka setelah webinar: 21:00 WIB tanggal 7 Agustus atau setelahnya
+      const isAfterWebinar = (year > 2026) || (year === 2026 && month > 7) || (year === 2026 && month === 7 && day > 7);
+      const isWebinarDay = (year === 2026 && month === 7 && day === 7);
+
+      if (isAfterWebinar || (isWebinarDay && hour >= 21)) return 'accessible';
+      return 'locked';
+    }
+
+    function isAssessmentCompleted() {
+      const email = localStorage.getItem('sgbva_registered_email');
+      return localStorage.getItem(`sgbva_day1_assessment_${email}`) === 'completed';
+    }
+
+    function getCountdown() {
+      const now = new Date();
+      const wib = new Date(now.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'}));
+      // Target: 7 Agustus 2026, 21:00 WIB
+      const target = new Date(2026, 7, 7, 21, 0, 0); // bulan 7 = Agustus (0-indexed)
+      // Adjust for WIB offset
+      const wibOffset = target.getTime() - new Date(target.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'})).getTime();
+      const targetWIB = new Date(target.getTime() + wibOffset);
+      const diff = targetWIB - wib;
+      if (diff <= 0) return { hours: 0, minutes: 0, seconds: 0 };
+      return {
+        hours: Math.floor(diff / 3600000),
+        minutes: Math.floor((diff % 3600000) / 60000),
+        seconds: Math.floor((diff % 60000) / 1000)
+      };
+    }
+
+    function updateCountdown() {
+      const c = getCountdown();
+      document.getElementById('countdown-hours').textContent = String(c.hours).padStart(2, '0');
+      document.getElementById('countdown-minutes').textContent = String(c.minutes).padStart(2, '0');
+      document.getElementById('countdown-seconds').textContent = String(c.seconds).padStart(2, '0');
+    }
+
+    function showState(state) {
+      document.getElementById('state-not-registered').classList.add('hidden');
+      document.getElementById('state-locked').classList.add('hidden');
+      document.getElementById('state-assessment').classList.add('hidden');
+      document.getElementById('state-gifts').classList.add('hidden');
+
+      if (state === 'not_registered') {
+        document.getElementById('state-not-registered').classList.remove('hidden');
+      } else if (state === 'locked') {
+        document.getElementById('state-locked').classList.remove('hidden');
+        updateCountdown();
+      } else if (state === 'accessible') {
+        if (isAssessmentCompleted()) {
+          showGifts();
+        } else {
+          document.getElementById('state-assessment').classList.remove('hidden');
+        }
+      }
+    }
+
+    function showGifts() {
+      document.getElementById('state-gifts').classList.remove('hidden');
+      const email = localStorage.getItem('sgbva_registered_email');
+      const score = localStorage.getItem(`sgbva_day1_score_${email}`) || '-';
+      const level = localStorage.getItem(`sgbva_day1_level_${email}`) || '-';
+      document.getElementById('gift-score').textContent = score + ' / 30';
+      document.getElementById('gift-level').textContent = level;
+    }
+
+    function startInlineAssessment() {
+      // Redirect to full assessment page
+      window.location.href = 'assessment.html';
+    }
+
+    // Initial render
+    showState(checkAccess());
+
+    // Update countdown every second if locked
+    setInterval(() => {
+      const state = checkAccess();
+      if (state === 'locked') {
+        updateCountdown();
+      } else {
+        showState(state);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

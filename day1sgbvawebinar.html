@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGBVA Day 1 Webinar — Virtual Assistant Career Relevance | Gratis</title>
+  <meta name="description" content="Webinar gratis Day 1: Mengenali peluang karier Virtual Assistant, memahami potensi yang sudah Anda miliki, dan menumbuhkan keyakinan bahwa profesi VA adalah pilihan karier yang realistis. Dipandu oleh Dani Herdiana.">
+  <meta name="keywords" content="virtual assistant, webinar gratis, karier remote, SGBVA, Dani Herdiana, work from home">
+  <meta property="og:title" content="SGBVA Day 1 Webinar — Virtual Assistant Career Relevance">
+  <meta property="og:description" content="Webinar gratis 3 hari tentang peluang karier Virtual Assistant. Daftar sekarang!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sgbva.com/day1sgbvawebinar.html">
+  <meta property="og:image" content="https://sgbva.com/sgbva1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4F071E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23980F45' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23980F45' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23980F45'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { heading: ['"Plus Jakarta Sans"', 'sans-serif'], body: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: { 50:'#FEF2F2',100:'#FFE9EB',200:'#FBE1E1',300:'#E4C7D1',400:'#C2185B',500:'#980F45',600:'#8B1238',700:'#6F1231',800:'#5B001F',900:'#4F071E' },
+            accent: { 50:'#FFFDF5',100:'#FFF1B8',200:'#FFD465',300:'#FEC43B',400:'#FCBE41',500:'#F4B73B',600:'#D4961A',700:'#B87D14' },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    /* ===== KEYFRAME ANIMATIONS ===== */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+    @keyframes glow-pulse { 0%,100% { box-shadow: 0 0 20px rgba(244,183,59,0.3), 0 0 40px rgba(152,15,69,0.1); } 50% { box-shadow: 0 0 30px rgba(244,183,59,0.5), 0 0 60px rgba(152,15,69,0.2); } }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 15px rgba(244,183,59,0.3); } 50% { box-shadow: 0 0 30px rgba(244,183,59,0.5); } }
+    @keyframes bounce-gentle { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes sparkle { 0%,100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.8; transform: scale(1.2); } }
+    @keyframes border-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ===== SPEAKER PHOTO PREMIUM ===== */
+    .speaker-photo-wrapper { position: relative; display: inline-block; }
+    .speaker-photo-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #F4B73B, #980F45, #F4B73B, #980F45, #F4B73B);
+      animation: border-spin 6s linear infinite;
+      z-index: 0;
+    }
+    .speaker-photo-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, rgba(244,183,59,0.3), rgba(152,15,69,0.3), rgba(244,183,59,0.3));
+      filter: blur(16px);
+      z-index: -1;
+      animation: glow-pulse 3s ease-in-out infinite;
+    }
+    .speaker-photo-wrapper img {
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      border: 4px solid #FDFBF9;
+    }
+
+    /* ===== MC PHOTO ===== */
+    .mc-photo-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .mc-photo-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #980F45, #E4C7D1);
+      z-index: 0;
+    }
+    .mc-photo-wrapper img {
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      border: 3px solid #FDFBF9;
+    }
+
+    /* ===== GRADIENT BG ===== */
+    .hero-gradient { background: linear-gradient(135deg, #4F071E 0%, #5B001F 40%, #4F071E 100%); }
+    .cta-gradient { background: linear-gradient(135deg, #4F071E 0%, #5B001F 50%, #4F071E 100%); }
+    .gold-gradient { background: linear-gradient(135deg, #F4B73B 0%, #FEC43B 100%); }
+
+    /* ===== FAQ ===== */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), padding 0.35s; padding-top: 0; padding-bottom: 0; }
+    .faq-answer.open { max-height: 300px; padding-top: 1rem; padding-bottom: 1.25rem; }
+    .faq-chevron { transition: transform 0.3s; }
+    .faq-trigger.active .faq-chevron { transform: rotate(180deg); }
+
+    /* ===== CTA BUTTON ===== */
+    .btn-cta {
+      background: linear-gradient(135deg, #F4B73B 0%, #FEC43B 100%);
+      color: #4F071E;
+      font-weight: 800;
+      border-radius: 16px;
+      padding: 1rem 2.5rem;
+      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: 0 4px 15px rgba(244,183,59,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-cta:hover::before { left: 100%; }
+    .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(244,183,59,0.5); }
+    .btn-cta:active { transform: translateY(0); }
+
+    /* ===== FORM ===== */
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1.5px solid #E4C7D1;
+      border-radius: 12px;
+      font-size: 0.9375rem;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      color: #1e293b;
+    }
+    .form-input:focus { border-color: #980F45; box-shadow: 0 0 0 3px rgba(152,15,69,0.08); }
+    .form-input::placeholder { color: #a0aec0; }
+
+    /* ===== LOADING SPINNER ===== */
+    .spinner { width: 20px; height: 20px; border: 2.5px solid rgba(79,7,30,0.2); border-top-color: #4F071E; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; vertical-align: middle; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== CARD HOVER ===== */
+    .card-hover { transition: transform 0.3s, box-shadow 0.3s; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+    /* ===== COUNTDOWN ===== */
+    .cd-box { background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border-radius: 10px; padding: 0.5rem 0.75rem; min-width: 56px; text-align: center; border: 1px solid rgba(255,255,255,0.08); }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #E4C7D1; border-radius: 3px; }
+
+    /* ===== SECTION DIVIDER ===== */
+    .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(244,183,59,0.4), transparent); }
+
+    /* ===== SAFE AREA ===== */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+      footer { padding-bottom: calc(2rem + env(safe-area-inset-bottom)); }
+    }
+
+    /* ===== MOBILE OPTIMIZATIONS ===== */
+    @media (max-width: 480px) {
+      .speaker-photo-wrapper img { width: 200px; height: 200px; object-fit: cover; }
+      .mc-photo-wrapper img { width: 100px; height: 100px; object-fit: cover; }
+    }
+  </style>
+</head>
+<body class="font-body bg-[#F9F9F9] text-slate-700 antialiased">
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-sm transition-all duration-300" role="navigation" aria-label="Navigasi utama">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index-dani.html" class="flex items-center gap-2 group" aria-label="SGBVA Home">
+          <img src="sgbva1.png" alt="SGBVA" width="40" height="40" loading="eager" class="w-10 h-auto">
+          <span class="font-heading font-bold text-xl text-white">SGBVA</span>
+        </a>
+        <a href="#register" class="inline-flex items-center px-5 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all text-sm" aria-label="Daftar webinar gratis">
+          Daftar Gratis
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== COUNTDOWN BAR ==================== -->
+  <div class="bg-gradient-to-r from-brand-800 to-brand-900 border-b border-brand-700/50 py-3 px-4 sticky top-[64px] z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 sm:gap-4">
+      <span class="text-[11px] text-white/50 font-semibold uppercase tracking-wider hidden sm:block">Dimulai dalam</span>
+      <div class="flex items-center gap-2">
+        <div class="cd-box">
+          <div class="text-lg sm:text-xl font-heading font-bold text-accent-400" id="cd-days">00</div>
+          <div class="text-[8px] sm:text-[9px] text-white/40 uppercase tracking-wider">Hari</div>
+        </div>
+        <span class="text-accent-400 font-bold text-sm">:</span>
+        <div class="cd-box">
+          <div class="text-lg sm:text-xl font-heading font-bold text-accent-400" id="cd-hours">00</div>
+          <div class="text-[8px] sm:text-[9px] text-white/40 uppercase tracking-wider">Jam</div>
+        </div>
+        <span class="text-accent-400 font-bold text-sm">:</span>
+        <div class="cd-box">
+          <div class="text-lg sm:text-xl font-heading font-bold text-accent-400" id="cd-minutes">00</div>
+          <div class="text-[8px] sm:text-[9px] text-white/40 uppercase tracking-wider">Menit</div>
+        </div>
+        <span class="text-accent-400 font-bold text-sm">:</span>
+        <div class="cd-box">
+          <div class="text-lg sm:text-xl font-heading font-bold text-accent-400" id="cd-seconds">00</div>
+          <div class="text-[8px] sm:text-[9px] text-white/40 uppercase tracking-wider">Detik</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden hero-gradient pt-8 pb-16 md:pt-12 md:pb-24">
+      <!-- Decorative orbs -->
+      <div class="absolute top-20 left-[10%] w-72 h-72 bg-accent-500/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-[5%] w-96 h-96 bg-brand-400/5 rounded-full blur-3xl"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <!-- Text -->
+          <div class="text-center lg:text-left order-2 lg:order-1">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/15 backdrop-blur-sm rounded-full text-sm font-semibold text-white mb-6" style="animation: fadeInDown 0.8s ease both">
+              <span class="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></span>
+              Webinar Gratis — Day 1
+            </div>
+            <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] text-white leading-tight mb-6" style="animation: fadeInUp 0.8s ease 0.15s both">
+              Virtual Assistant: <span class="bg-gradient-to-r from-accent-300 to-accent-500 bg-clip-text text-transparent">Peluang Karier</span> yang Realistis
+            </h1>
+            <p class="text-base sm:text-lg text-white/70 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed" style="animation: fadeInUp 0.8s ease 0.3s both">
+              Mengenali peluang karier Virtual Assistant, memahami potensi yang sudah Anda miliki, dan menumbuhkan keyakinan bahwa profesi VA adalah pilihan karier yang nyata.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start" style="animation: fadeInUp 0.8s ease 0.45s both">
+              <a href="#register" class="btn-cta text-base sm:text-lg w-full sm:w-auto text-center">
+                DAFTAR SEKARANG — GRATIS
+              </a>
+              <div class="flex items-center gap-2 text-white/50 text-sm">
+                <span class="text-accent-400 font-bold text-lg">7</span> Sesi Interaktif
+              </div>
+            </div>
+            <!-- Micro trust signals -->
+            <div class="flex items-center gap-6 mt-8 justify-center lg:justify-start text-xs text-white/40" style="animation: fadeIn 0.8s ease 0.6s both">
+              <span class="flex items-center gap-1.5">100% Gratis</span>
+              <span class="flex items-center gap-1.5">7 Agustus 2026</span>
+              <span class="flex items-center gap-1.5">19:00 WIB</span>
+            </div>
+          </div>
+
+          <!-- Speaker Hero Photo -->
+          <div class="order-1 lg:order-2 flex justify-center" style="animation: fadeIn 1s ease 0.3s both">
+            <div class="relative">
+              <!-- Glow behind -->
+              <div class="absolute inset-0 bg-gradient-to-b from-accent-500/20 to-brand-500/20 rounded-full blur-3xl scale-90" style="animation: float 6s ease-in-out infinite"></div>
+              <div class="speaker-photo-wrapper">
+                <img src="DaniH.png" alt="Dani Herdiana — Speaker Utama Webinar SGBVA Day 1" width="320" height="320" loading="eager" class="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 object-cover" style="animation: float 5s ease-in-out infinite">
+              </div>
+              <!-- Floating badge -->
+              <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white rounded-xl px-4 py-2 shadow-lg flex items-center gap-2" style="animation: fadeInUp 0.8s ease 0.8s both">
+                <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span class="text-xs font-bold text-slate-800">Speaker Utama</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MOTIVATIONAL QUOTE ==================== -->
+    <section class="py-12 sm:py-16 bg-gradient-to-r from-brand-700/90 via-brand-800/90 to-brand-700/90 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-accent-400/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"></path></svg>
+        <p class="text-base sm:text-lg md:text-xl text-white font-medium leading-relaxed italic">"Anda tidak sendirian. Di dunia ini tidak ada yang kebetulan. Kenapa Anda melihat ini? Mungkin ada kesempatan untuk Anda jika Anda berusaha untuk lebih baik."</p>
+        <p class="text-white/40 text-xs sm:text-sm mt-4">— Pesan untuk Anda yang sedang mencari perubahan</p>
+      </div>
+    </section>
+
+    <!-- ==================== PROBLEM STATEMENT ==================== -->
+    <section class="py-16 sm:py-20 md:py-28 bg-[#FAFAFA]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+        <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-6">Saya belum yakin apakah Virtual Assistant cocok untuk saya.</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">Banyak profesional merasa perkembangan kariernya stagnan — gaji naik lambat, tugas berulang, dan pasar kerja terus berubah. Tapi sebenarnya, kamu mungkin sudah memiliki beberapa kemampuan yang dibutuhkan klien global.</p>
+        <p class="text-base sm:text-lg text-brand-600 font-semibold mt-6 max-w-3xl mx-auto">Di akhir sesi ini, kamu akan berubah menjadi: "Profesi Virtual Assistant merupakan peluang karier yang realistis, dan saya ingin mempelajari keterampilan yang dibutuhkan."</p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== WEBINAR AGENDA ==================== -->
+    <section class="py-16 sm:py-20 md:py-28 bg-[#F9F4EF] relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 sm:mb-14 reveal">
+          <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-4">Apa yang Akan Anda Alami Hari Ini</span>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-4">7 Sesi yang Dirancang untuk Mengubah Cara Anda Melihat Karier</h2>
+          <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">Bukan sekadar webinar biasa. Setiap sesi membawa Anda pada perubahan pola pikir yang nyata.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 reveal">
+          <!-- Card items -->
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-brand-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">1</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Polling Interaktif</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Jawab pertanyaan singkat dan lihat bahwa ribuan orang memiliki tantangan karier yang sama dengan Anda.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-50 rounded-full text-xs font-semibold text-brand-600">Terhubung</span>
+          </div>
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-accent-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">2</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Peluang Kerja Remote</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Data terbaru menunjukkan peluang remote work meningkat pesat. Anda akan terkejut melihat betapa besarnya pasar ini.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent-50 rounded-full text-xs font-semibold text-accent-600">Terbuka Wawasan</span>
+          </div>
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-green-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">3</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Kisah Nyata VA Indonesia</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Dengar langsung dari orang Indonesia yang sudah berhasil membangun karier remote dengan klien internasional.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 rounded-full text-xs font-semibold text-green-600">Percaya</span>
+          </div>
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-purple-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">4</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Cek Skill yang Sudah Anda Miliki</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Ternyata banyak pengalaman kerja Anda — mengatur jadwal, melayani pelanggan, mengelola data — sangat dibutuhkan klien.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-50 rounded-full text-xs font-semibold text-purple-600">Yakin Diri</span>
+          </div>
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">5</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Uji Kesiapan Karier Anda</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Ikuti assessment interaktif untuk mengetahui seberapa siap Anda memulai karier sebagai Virtual Assistant.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-50 rounded-full text-xs font-semibold text-blue-600">Optimis</span>
+          </div>
+          <div class="bg-[#FDFBF9] rounded-2xl p-5 border border-[#E4C7D1]/30 card-hover">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-9 h-9 rounded-lg bg-yellow-500 flex items-center justify-center flex-shrink-0"><span class="text-white font-heading font-bold text-sm">6</span></div>
+              <h4 class="font-heading font-bold text-sm sm:text-base text-slate-900">Tanya Apa Saja</h4>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed mb-3">Sesi langsung tanya jawab — tidak ada pertanyaan yang salah. Kami bantu menjawab rasa penasaran Anda.</p>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-50 rounded-full text-xs font-semibold text-yellow-700">Penasaran</span>
+          </div>
+        </div>
+
+        <!-- Bonus Card -->
+        <div class="mt-10 sm:mt-12 reveal">
+          <div class="relative bg-gradient-to-br from-brand-800 via-brand-900 to-[#4F071E] rounded-3xl p-8 sm:p-10 text-white overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-6 right-8 w-20 h-20 border border-accent-400/20 rounded-full" style="animation: float 6s ease-in-out infinite"></div>
+            <div class="absolute bottom-8 left-10 w-14 h-14 border border-white/10 rounded-full" style="animation: float 8s ease-in-out infinite 1s"></div>
+            <div class="relative z-10">
+              <div class="flex items-center justify-center gap-2 mb-6">
+                <span class="px-4 py-1.5 bg-accent-500 text-white text-xs font-bold rounded-full uppercase tracking-wider shadow-lg" style="animation: pulse-glow 2s ease-in-out infinite">Bonus Eksklusif</span>
+              </div>
+              <div class="text-center mb-8">
+                <h3 class="font-heading font-extrabold text-xl sm:text-2xl md:text-3xl mb-3 bg-gradient-to-r from-accent-300 via-accent-400 to-accent-300 bg-clip-text text-transparent">Bonus yang Tidak Akan Anda Dapatkan di Tempat Lain</h3>
+                <p class="text-white/70 text-sm sm:text-base max-w-xl mx-auto"><strong class="text-white">VA Career Readiness Assessment</strong> — tool interaktif premium yang dirancang khusus untuk mengukur seberapa siap Anda memulai karier sebagai Virtual Assistant.</p>
+              </div>
+              <div class="grid grid-cols-3 gap-3 sm:gap-4 mb-8 max-w-md mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 text-center border border-white/10">
+                  <div class="text-xl sm:text-2xl font-heading font-bold text-accent-300 mb-1">5</div>
+                  <div class="text-[10px] sm:text-xs text-white/60">Aspek Dinilai</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 text-center border border-white/10">
+                  <div class="text-xl sm:text-2xl font-heading font-bold text-accent-300 mb-1">100</div>
+                  <div class="text-[10px] sm:text-xs text-white/60">Skor Kesiapan</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 text-center border border-white/10">
+                  <div class="text-xl sm:text-2xl font-heading font-bold text-accent-300 mb-1">1:1</div>
+                  <div class="text-[10px] sm:text-xs text-white/60">Rekomendasi</div>
+                </div>
+              </div>
+              <div class="text-center">
+                <a href="#register" class="inline-flex items-center gap-2 btn-cta text-base sm:text-lg">
+                  MULAI SEKARANG — GRATIS
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== SPEAKER PROFILE (PREMIUM) ==================== -->
+    <section id="speaker" class="py-16 sm:py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-10 sm:mb-14 reveal">
+          <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-4">Pembicara Utama</span>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-3">Dipandu Langsung oleh Dani Herdiana</h2>
+          <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">Praktisi berpengalaman yang akan memandu Anda memahami dunia Virtual Assistant secara menyeluruh.</p>
+        </div>
+
+        <div class="bg-[#FDFBF9] rounded-3xl border border-[#E4C7D1]/30 overflow-hidden reveal">
+          <div class="grid md:grid-cols-2 gap-0">
+            <!-- Photo side -->
+            <div class="flex items-center justify-center py-10 sm:py-12 md:py-0 md:min-h-[480px] bg-gradient-to-b from-brand-50/50 to-[#FDFBF9] md:bg-gradient-to-br md:from-brand-50/80 md:to-[#FDFBF9]">
+              <div class="speaker-photo-wrapper">
+                <img src="DaniH.png" alt="Dani Herdiana — Speaker Utama SGBVA" width="300" height="300" loading="lazy" class="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-cover" style="animation: float 5s ease-in-out infinite">
+              </div>
+            </div>
+            <!-- Info side -->
+            <div class="p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+              <span class="inline-flex items-center gap-2 px-3 py-1 bg-accent-50 text-accent-700 rounded-full text-xs font-bold mb-4 self-start">
+                <span class="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
+                Speaker Utama — Day 1
+              </span>
+              <h3 class="font-heading font-extrabold text-2xl sm:text-3xl text-slate-900 mb-1">Dani Herdiana</h3>
+              <p class="text-brand-600 font-semibold text-sm mb-4">Virtual Assistant & Career Coach</p>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Praktisi Virtual Assistant yang berpengalaman membantu individu menemukan dan membangun karier di bidang remote work. Dengan pemahaman mendalam tentang kebutuhan klien global, Dani memandu peserta memahami potensi diri dan langkah konkret menuju karier VA yang realistis.
+              </p>
+              <div class="space-y-3 mb-6">
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  </span>
+                  <span class="text-sm text-slate-700">Pengalaman langsung sebagai Virtual Assistant internasional</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  </span>
+                  <span class="text-sm text-slate-700">Memahami kebutuhan dan standar klien global</span>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3 text-brand-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                  </span>
+                  <span class="text-sm text-slate-700">Membimbing peserta mengenali potensi karier mereka</span>
+                </div>
+              </div>
+              <a href="#register" class="inline-flex items-center gap-2 btn-cta text-sm w-fit">
+                Ikuti Webinar Day 1
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MC Profile -->
+        <div class="mt-8 sm:mt-10 reveal">
+          <div class="bg-[#FDFBF9] rounded-2xl border border-[#E4C7D1]/30 p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+            <div class="mc-photo-wrapper flex-shrink-0">
+              <img src="lusi.png" alt="Lusi — Host & Moderator Webinar SGBVA" width="120" height="120" loading="lazy" class="w-24 h-24 sm:w-28 sm:h-28 object-cover">
+            </div>
+            <div class="text-center sm:text-left">
+              <span class="inline-block px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-semibold mb-2">Host & Moderator</span>
+              <h3 class="font-heading font-bold text-xl text-slate-900 mb-1">Lusi</h3>
+              <p class="text-slate-500 text-sm leading-relaxed">Energik dan interaktif. Membangun suasana nyaman selama webinar, memandu polling interaktif, dan memfasilitasi sesi tanya jawab.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="py-16 sm:py-20 md:py-28 bg-[#FAFAFA] relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-10 sm:mb-14 reveal">
+          <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-4">Kata Alumni</span>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-3">Mereka Sudah Membuktikan</h2>
+          <p class="text-slate-600 max-w-xl mx-auto text-sm sm:text-base">Cerita nyata dari alumni yang sudah berhasil membangun karier Virtual Assistant.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 reveal">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E4C7D1]/20 card-hover">
+            <svg class="w-8 h-6 text-brand-200 mb-3" fill="currentColor" viewBox="0 0 24 17"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"/></svg>
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">"Mengikuti kursus SGBVA mengubah hidup saya! Materi yang terstruktur sangat cocok untuk pemula, dan saya mendapatkan klien pertama selama kursus."</p>
+            <div>
+              <p class="font-bold text-brand-700 text-sm">Cindy Pricilla</p>
+              <p class="text-xs text-slate-400">Virtual Assistant</p>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E4C7D1]/20 card-hover">
+            <svg class="w-8 h-6 text-brand-200 mb-3" fill="currentColor" viewBox="0 0 24 17"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"/></svg>
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">"Awalnya saya skeptis, tapi setelah webinar Day 1 saya jadi yakin profesi VA itu nyata. Sekarang saya sudah punya 2 klien tetap!"</p>
+            <div>
+              <p class="font-bold text-brand-700 text-sm">Rina Wulandari</p>
+              <p class="text-xs text-slate-400">Remote Admin & VA</p>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-[#E4C7D1]/20 card-hover sm:col-span-2 lg:col-span-1">
+            <svg class="w-8 h-6 text-brand-200 mb-3" fill="currentColor" viewBox="0 0 24 17"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z"/></svg>
+            <p class="text-sm text-slate-700 leading-relaxed mb-4">"Webinar ini membuka mata saya. Ternyata skill yang selama ini saya anggap biasa saja justru sangat dibutuhkan klien internasional."</p>
+            <div>
+              <p class="font-bold text-brand-700 text-sm">Aditya Pratama</p>
+              <p class="text-xs text-slate-400">Freelance VA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== UPCOMING DAYS ==================== -->
+    <section class="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-[#F9F4EF] to-[#F5ECEF] relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-10 sm:mb-14 reveal">
+          <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-semibold mb-4">3 Hari, 1 Perjalanan</span>
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-3">Perjalanan Anda Selanjutnya</h2>
+          <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">Setiap hari membawa Anda semakin dekat menjadi Virtual Assistant yang siap bekerja.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 sm:gap-8 reveal">
+          <!-- Day 2 -->
+          <div class="group relative">
+            <div class="absolute -inset-0.5 bg-gradient-to-br from-accent-400 to-accent-600 rounded-3xl blur opacity-20 group-hover:opacity-30 transition"></div>
+            <div class="relative bg-white rounded-2xl overflow-hidden border border-[#E4C7D1]/20 shadow-lg">
+              <div class="h-1.5 bg-gradient-to-r from-accent-400 to-accent-500"></div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-accent-400 to-accent-500 flex items-center justify-center shadow-lg shadow-accent-500/25">
+                      <span class="text-white font-heading font-bold">2</span>
+                    </div>
+                    <div>
+                      <div class="text-xs font-semibold text-accent-600 tracking-wider uppercase">Hari Kedua</div>
+                      <div class="text-xs text-slate-400">8 Agustus 2026</div>
+                    </div>
+                  </div>
+                  <span class="px-3 py-1 bg-accent-50 text-accent-600 text-xs font-bold rounded-full border border-accent-200/50">Selanjutnya</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-slate-900 mb-3 leading-snug">Rahasia Menjadi Virtual Assistant Pilihan Klien Internasional</h3>
+                <div class="space-y-2 mb-5">
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-accent-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    5 Standar Kualitas Klien Global
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-accent-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    Tools & Workflow Profesional
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-accent-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    Portfolio Proof-of-Skill
+                  </div>
+                </div>
+                <div class="bg-accent-50/50 rounded-xl p-4 text-xs text-slate-600">Selesaikan Hari 1 untuk membuka akses ke sesi ini</div>
+              </div>
+            </div>
+          </div>
+          <!-- Day 3 -->
+          <div class="group relative">
+            <div class="absolute -inset-0.5 bg-gradient-to-br from-brand-400 to-brand-600 rounded-3xl blur opacity-15 group-hover:opacity-25 transition"></div>
+            <div class="relative bg-white rounded-2xl overflow-hidden border border-[#E4C7D1]/20 shadow-lg">
+              <div class="h-1.5 bg-gradient-to-r from-brand-500 to-brand-600"></div>
+              <div class="p-6 sm:p-8">
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center shadow-lg shadow-brand-500/25">
+                      <span class="text-white font-heading font-bold">3</span>
+                    </div>
+                    <div>
+                      <div class="text-xs font-semibold text-brand-600 tracking-wider uppercase">Hari Ketiga</div>
+                      <div class="text-xs text-slate-400">9 Agustus 2026</div>
+                    </div>
+                  </div>
+                  <span class="px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-full border border-brand-200/50">Mendatang</span>
+                </div>
+                <h3 class="font-heading font-bold text-lg text-slate-900 mb-3 leading-snug">Bongkar Hiring Gap & Susun 90-Day VA Action Plan</h3>
+                <div class="space-y-2 mb-5">
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-brand-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    Inside the Hiring Room
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-brand-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    Readiness Scorecard
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-slate-600">
+                    <span class="w-5 h-5 rounded bg-brand-50 flex items-center justify-center flex-shrink-0"><svg class="w-3 h-3 text-brand-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                    90-Day Career Roadmap
+                  </div>
+                </div>
+                <div class="bg-brand-50/50 rounded-xl p-4 text-xs text-slate-600">Selesaikan Hari 2 untuk membuka akses ke sesi ini</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Journey indicator -->
+        <div class="flex items-center justify-center gap-3 mt-8 reveal">
+          <span class="text-xs font-semibold text-accent-600 px-3 py-1.5 bg-accent-50 rounded-full border border-accent-200/50">Hari 1</span>
+          <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-xs font-semibold text-slate-400">Hari 2</span>
+          <svg class="w-3 h-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          <span class="text-xs font-semibold text-slate-400">Hari 3</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== CTA REGISTRATION ==================== -->
+    <section id="register" class="py-16 sm:py-20 md:py-28 cta-gradient relative overflow-hidden">
+      <div class="absolute top-10 left-[20%] w-64 h-64 bg-accent-500/5 rounded-full blur-3xl"></div>
+      <div class="max-w-xl mx-auto px-4 sm:px-6 relative z-10">
+        <div class="text-center mb-8 reveal">
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-3">Daftar Gratis — Day 1</h2>
+          <p class="text-white/60 text-sm sm:text-base">Amankan akses Anda ke webinar Hari 1</p>
+        </div>
+
+        <!-- Success state (hidden by default) -->
+        <div id="reg-success" class="hidden bg-[#FDFBF9] rounded-2xl p-8 sm:p-10 text-center shadow-xl">
+          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-5">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-slate-900 mb-2">Pendaftaran Berhasil!</h3>
+          <p class="text-slate-600 text-sm mb-2">Selamat, <span id="reg-success-name" class="font-semibold text-brand-600"></span>!</p>
+          <p class="text-slate-500 text-xs mb-6">Anda akan diarahkan ke halaman free gift...</p>
+          <a href="freegift-day1.html" class="inline-flex items-center gap-2 btn-cta text-sm">
+            Lanjut ke Free Gift
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </a>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="reg-form-wrapper" class="bg-[#FDFBF9] rounded-2xl p-6 sm:p-8 shadow-xl">
+          <form id="reg-form" novalidate>
+            <div class="mb-4">
+              <label for="reg-name" class="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap <span class="text-red-500">*</span></label>
+              <input type="text" id="reg-name" name="name" required autocomplete="name" class="form-input" placeholder="Nama lengkap Anda">
+              <p class="text-red-500 text-xs mt-1 hidden" id="err-name">Nama wajib diisi</p>
+            </div>
+            <div class="mb-4">
+              <label for="reg-email" class="block text-sm font-semibold text-slate-700 mb-1.5">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="reg-email" name="email" required autocomplete="email" class="form-input" placeholder="email@anda.com">
+              <p class="text-red-500 text-xs mt-1 hidden" id="err-email">Email tidak valid</p>
+            </div>
+            <div class="mb-4">
+              <label for="reg-phone" class="block text-sm font-semibold text-slate-700 mb-1.5">No. WhatsApp <span class="text-red-500">*</span></label>
+              <input type="tel" id="reg-phone" name="phone" required autocomplete="tel" class="form-input" placeholder="+62 812-XXXX-XXXX">
+              <p class="text-red-500 text-xs mt-1 hidden" id="err-phone">Nomor WhatsApp wajib diisi</p>
+            </div>
+            <div class="flex items-start gap-3 mb-6">
+              <input type="checkbox" id="reg-consent" required class="mt-1 accent-brand-500 w-4 h-4">
+              <label for="reg-consent" class="text-xs text-slate-500 leading-relaxed">Saya setuju untuk menerima informasi penting via email dan WhatsApp. Anda bisa unsubscribe kapan saja.</label>
+            </div>
+            <button type="submit" id="reg-submit-btn" class="w-full py-4 btn-cta text-base sm:text-lg flex items-center justify-center gap-2">
+              <span id="btn-text">DAFTAR SEKARANG — GRATIS</span>
+              <span id="btn-spinner" class="hidden"><span class="spinner"></span></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA ==================== -->
+    <section class="py-12 sm:py-16 bg-[#FAFAFA]">
+      <div class="max-w-3xl mx-auto px-4 text-center reveal">
+        <p class="text-slate-500 mb-4 text-sm sm:text-base">Tiga hari. Tiga hasil. Satu perjalanan lengkap.</p>
+        <div class="flex flex-wrap justify-center gap-3 text-xs sm:text-sm">
+          <span class="px-3 py-1.5 bg-brand-100 text-brand-700 rounded-full font-semibold">Day 1: Temukan arah karier VA</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-400 rounded-full">Day 2: Bangun bukti kemampuan</span>
+          <span class="px-3 py-1.5 bg-slate-100 text-slate-400 rounded-full">Day 3: Ukur kesiapan & action</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="py-16 sm:py-20 md:py-28 bg-[#F9F4EF] relative overflow-hidden">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-10 sm:mb-12 reveal">
+          <h2 class="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-slate-900">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+        <div class="space-y-3 sm:space-y-4 reveal">
+          <!-- FAQ 1 -->
+          <div class="bg-[#FDFBF9] rounded-xl border border-[#E4C7D1]/30 overflow-hidden">
+            <button class="faq-trigger w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4" aria-expanded="false">
+              <span class="font-semibold text-slate-900 text-sm sm:text-base">Apakah webinar ini gratis?</span>
+              <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6"><p class="text-slate-600 text-sm leading-relaxed">Ya, seluruh webinar 3 hari ini gratis. Anda hanya perlu mendaftar dan hadir.</p></div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="bg-[#FDFBF9] rounded-xl border border-[#E4C7D1]/30 overflow-hidden">
+            <button class="faq-trigger w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4" aria-expanded="false">
+              <span class="font-semibold text-slate-900 text-sm sm:text-base">Apakah ini cocok untuk pemula?</span>
+              <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6"><p class="text-slate-600 text-sm leading-relaxed">Ya. Hari 1 dirancang untuk membantu Anda memahami apakah karier ini relevan, tanpa memerlukan pengalaman sebelumnya.</p></div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="bg-[#FDFBF9] rounded-xl border border-[#E4C7D1]/30 overflow-hidden">
+            <button class="faq-trigger w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4" aria-expanded="false">
+              <span class="font-semibold text-slate-900 text-sm sm:text-base">Apakah saya harus mahir berbahasa Inggris?</span>
+              <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6"><p class="text-slate-600 text-sm leading-relaxed">Tidak harus langsung mahir. Namun, kemampuan komunikasi perlu terus dikembangkan jika ingin bekerja dengan klien global.</p></div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="bg-[#FDFBF9] rounded-xl border border-[#E4C7D1]/30 overflow-hidden">
+            <button class="faq-trigger w-full text-left px-5 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-4" aria-expanded="false">
+              <span class="font-semibold text-slate-900 text-sm sm:text-base">Apakah webinar ini menjamin saya mendapatkan klien?</span>
+              <svg class="faq-chevron w-5 h-5 text-slate-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer px-5 sm:px-6"><p class="text-slate-600 text-sm leading-relaxed">Tidak. Webinar membantu mempersiapkan skill, portfolio, dan readiness. Keputusan perekrutan tetap berada di tangan klien.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-10 sm:py-12 bg-[#4F071E] text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <img src="sgbva1.png" alt="SGBVA" width="40" height="40" loading="lazy" class="w-10 h-auto">
+        <span class="font-heading font-bold text-xl">SGBVA</span>
+      </div>
+      <p class="text-white/50 text-sm">© 2026 SGBVA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // ===== COUNTDOWN TIMER =====
+    const targetDate = new Date('2026-08-07T19:00:00+07:00').getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        ['cd-days','cd-hours','cd-minutes','cd-seconds'].forEach(id => document.getElementById(id).textContent = '00');
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ===== SCROLL REVEAL =====
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        const isOpen = answer.classList.contains('open');
+        // Close all others
+        document.querySelectorAll('.faq-answer.open').forEach(a => {
+          a.classList.remove('open');
+          a.previousElementSibling.classList.remove('active');
+          a.previousElementSibling.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          answer.classList.add('open');
+          btn.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // ===== REGISTRATION FORM =====
+    (function() {
+      const GAS_URL = window.SGBVA_GAS_URL || '';
+      const form = document.getElementById('reg-form');
+      const wrapper = document.getElementById('reg-form-wrapper');
+      const success = document.getElementById('reg-success');
+      const submitBtn = document.getElementById('reg-submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnSpinner = document.getElementById('btn-spinner');
+
+      // Check if already registered
+      const registeredEmail = localStorage.getItem('sgbva_registered_email');
+      if (registeredEmail) {
+        const name = localStorage.getItem('sgbva_registered_name') || '';
+        wrapper.classList.add('hidden');
+        success.classList.remove('hidden');
+        document.getElementById('reg-success-name').textContent = name;
+        // Auto redirect after delay
+        setTimeout(() => { window.location.href = 'freegift-day1.html'; }, 2000);
+        return;
+      }
+
+      function clearErrors() {
+        document.querySelectorAll('[id^="err-"]').forEach(el => el.classList.add('hidden'));
+      }
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      function showError(field, msg) {
+        const el = document.getElementById('err-' + field);
+        if (el) { el.textContent = msg; el.classList.remove('hidden'); }
+      }
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        clearErrors();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const phone = form.phone.value.trim();
+        const consent = document.getElementById('reg-consent').checked;
+
+        let valid = true;
+        if (!name) { showError('name', 'Nama wajib diisi'); valid = false; }
+        if (!email || !validateEmail(email)) { showError('email', 'Email tidak valid'); valid = false; }
+        if (!phone) { showError('phone', 'Nomor WhatsApp wajib diisi'); valid = false; }
+        if (!consent) { alert('Anda harus menyetujui kebijakan privasi untuk melanjutkan.'); valid = false; }
+        if (!valid) return;
+
+        // Show loading
+        submitBtn.disabled = true;
+        btnText.textContent = 'Memproses...';
+        btnSpinner.classList.remove('hidden');
+
+        const payload = {
+          name, email, phone,
+          timestamp: new Date().toISOString(),
+          source: 'day1sgbvawebinar',
+          event: 'Day 1 Webinar - Career Relevance'
+        };
+
+        try {
+          if (GAS_URL) {
+            await fetch(GAS_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              body: JSON.stringify(payload)
+            });
+          }
+          // Save to localStorage
+          localStorage.setItem('sgbva_registered_email', email);
+          localStorage.setItem('sgbva_registered_name', name);
+          localStorage.setItem('sgbva_registered_phone', phone);
+          localStorage.setItem('sgbva_registered_at', new Date().toISOString());
+
+          // Show success
+          wrapper.classList.add('hidden');
+          success.classList.remove('hidden');
+          document.getElementById('reg-success-name').textContent = name;
+
+          // Redirect after delay
+          setTimeout(() => { window.location.href = 'freegift-day1.html'; }, 2500);
+
+        } catch (err) {
+          console.error('Registration error:', err);
+          // Still save locally and redirect
+          localStorage.setItem('sgbva_registered_email', email);
+          localStorage.setItem('sgbva_registered_name', name);
+          localStorage.setItem('sgbva_registered_phone', phone);
+          localStorage.setItem('sgbva_registered_at', new Date().toISOString());
+          wrapper.classList.add('hidden');
+          success.classList.remove('hidden');
+          document.getElementById('reg-success-name').textContent = name;
+          setTimeout(() => { window.location.href = 'freegift-day1.html'; }, 2500);
+        }
+      });
+    })();
+
+    // ===== NAVBAR SCROLL EFFECT =====
+    let lastScroll = 0;
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+      } else {
+        navbar.style.boxShadow = 'none';
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
