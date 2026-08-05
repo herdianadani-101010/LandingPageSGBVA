@@ -18,7 +18,7 @@ const SGBVA_CONFIG = {
   // GOOGLE APPS SCRIPT URL
   // Deploy GAS Anda dan paste URL-nya di sini
   // =====================================================
-  gasUrl: 'https://script.google.com/macros/s/AKfycbxGTwHIyxkekQ4GZSGEyJFRtEF4EamszMv7DIFNl5KqBeXM4rjig_YH04xZSwZ8EBzo/exec',
+  gasUrl: 'https://script.google.com/macros/s/AKfycbz0S-tu7BVrQ3AGG0vjaO5JoAgrsVLYg4X8kGSMpeGwvkYGKH2Ey3GBgItiOIR6AGQM/exec',
 
   // =====================================================
   // WEBINAR SCHEDULE (Tanggal & Waktu)
