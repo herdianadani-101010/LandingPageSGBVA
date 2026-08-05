@@ -86,6 +86,37 @@
     .warm-gradient {
       background: linear-gradient(180deg, #4F071E 0%, #6F1231 50%, #4F071E 100%);
     }
+    /* Screenshot/Download styles */
+    .btn-download {
+      background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+      color: white;
+      border-radius: 12px;
+      padding: 14px 32px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+    }
+    #screenshot-container {
+      position: relative;
+      background: linear-gradient(135deg, #4F071E 0%, #6F1231 100%);
+      border-radius: 16px;
+      padding: 40px;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+    #screenshot-container::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      background: radial-gradient(circle at 30% 30%, rgba(244,183,59,0.1) 0%, transparent 50%);
+    }
   </style>
 </head>
 <body class="font-body bg-[#4F071E] min-h-screen flex items-center justify-center antialiased warm-gradient">
@@ -231,6 +262,43 @@
         <p class="text-xs text-gray-500 mt-1">Siapkan diri untuk belajar standar klien global!</p>
       </div>
 
+      <!-- Download Screenshot Button -->
+      <div class="text-center mb-6">
+        <button onclick="generateScreenshot()" class="btn-download inline-flex items-center gap-2 w-full justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          Download Free Gift Certificate
+        </button>
+        <p class="text-xs text-gray-400 mt-2">Klik untuk mengunduh sertifikat free gift Anda</p>
+      </div>
+
+      <!-- Screenshot Container (hidden by default, shown when generating) -->
+      <div id="screenshot-container" class="hidden">
+        <div class="relative z-10">
+          <div class="inline-block bg-accent-500 text-white text-xs font-bold px-4 py-1 rounded-full mb-4">SGBVA FREE GIFT</div>
+          <h3 class="font-heading font-bold text-2xl mb-2">VA Career Readiness Assessment</h3>
+          <p class="text-white/70 text-sm mb-6">Hari 1 - Webinar Gratis</p>
+
+          <div class="bg-white/10 rounded-xl p-4 mb-6 inline-block">
+            <div class="text-left text-sm">
+              <p class="mb-2"><span class="text-accent-400">✓</span> AI Prompt Pack — prompt siap pakai untuk VA</p>
+              <p class="mb-2"><span class="text-accent-400">✓</span> Google Workspace Cheat Sheet — referensi cepat</p>
+            </div>
+          </div>
+
+          <div class="text-xs text-white/50 mt-4">
+            <p id="screenshot-name" class="font-semibold text-white"></p>
+            <p id="screenshot-date" class="mt-1"></p>
+          </div>
+
+          <div class="mt-4 flex items-center justify-center gap-2 text-xs text-accent-400">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <span>SGBVA - Virtual Assistant Career</span>
+          </div>
+        </div>
+      </div>
+
       <div class="text-center border-t border-gray-100 pt-6">
         <a href="index-dani.html" class="text-brand-400 text-sm font-medium hover:text-brand-500 transition-colors">
           Kembali ke halaman utama
@@ -239,30 +307,30 @@
     </div>
   </div>
 
+  <script src="config.js"></script>
   <script src="registration.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script>
+    // Configuration from config.js
+    window.SGBVA_GAS_URL = window.SGBVA_CONFIG.gasUrl;
+
     const DAY_NUM = 1;
     const GIFT_NAME = 'AI Prompt Pack + Google Workspace Cheat Sheet';
     const LANDING_PAGE = 'index-dani.html';
 
     function checkAccess() {
-      const now = new Date();
-      const wibStr = now.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'});
-      const wib = new Date(wibStr);
-      const year = wib.getFullYear();
-      const month = wib.getMonth(); // 0-indexed
-      const day = wib.getDate();
-      const hour = wib.getHours();
       const registered = localStorage.getItem('sgbva_registered_email');
-
       if (!registered) return 'not_registered';
 
-      // Webinar Day 1: 7 Agustus 2026, 19:00-21:00 WIB
-      // Free gift buka setelah webinar: 21:00 WIB tanggal 7 Agustus atau setelahnya
-      const isAfterWebinar = (year > 2026) || (year === 2026 && month > 7) || (year === 2026 && month === 7 && day > 7);
-      const isWebinarDay = (year === 2026 && month === 7 && day === 7);
+      // Check if bypass time restriction is enabled in config
+      if (window.SGBVA_CONFIG.freeGift.bypassTimeRestriction) {
+        return 'accessible';
+      }
 
-      if (isAfterWebinar || (isWebinarDay && hour >= 21)) return 'accessible';
+      // Check webinar schedule from config
+      const isAccessible = window.SGBVA_CONFIG.isFreeGiftAccessible();
+      if (isAccessible) return 'accessible';
+
       return 'locked';
     }
 
@@ -274,12 +342,14 @@
     function getCountdown() {
       const now = new Date();
       const wib = new Date(now.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'}));
-      // Target: 7 Agustus 2026, 21:00 WIB
-      const target = new Date(2026, 7, 7, 21, 0, 0); // bulan 7 = Agustus (0-indexed)
-      // Adjust for WIB offset
-      const wibOffset = target.getTime() - new Date(target.toLocaleString('en-US', {timeZone: 'Asia/Jakarta'})).getTime();
-      const targetWIB = new Date(target.getTime() + wibOffset);
+
+      // Get target from config (free gift opens 2 hours after webinar starts)
+      const webinarDate = window.SGBVA_CONFIG.getWebinarDate(1);
+      if (!webinarDate) return { hours: 0, minutes: 0, seconds: 0 };
+
+      const targetWIB = new Date(webinarDate.getTime() + (2 * 60 * 60 * 1000)); // +2 hours
       const diff = targetWIB - wib;
+
       if (diff <= 0) return { hours: 0, minutes: 0, seconds: 0 };
       return {
         hours: Math.floor(diff / 3600000),
@@ -341,6 +411,50 @@
         showState(state);
       }
     }, 1000);
+
+    // Generate Screenshot Function
+    function generateScreenshot() {
+      const container = document.getElementById('screenshot-container');
+      const name = localStorage.getItem('sgbva_registered_name') || 'Peserta';
+      const email = localStorage.getItem('sgbva_registered_email') || '';
+      const score = localStorage.getItem(`sgbva_day1_score_${email}`) || '-';
+      const level = localStorage.getItem(`sgbva_day1_level_${email}`) || '-';
+
+      // Update screenshot content
+      document.getElementById('screenshot-name').textContent = name;
+      document.getElementById('screenshot-date').textContent = new Date().toLocaleDateString('id-ID', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      // Show container temporarily
+      container.classList.remove('hidden');
+
+      // Use html2canvas to capture
+      html2canvas(container, {
+        backgroundColor: '#4F071E',
+        scale: 2,
+        logging: false,
+        useCORS: true
+      }).then(canvas => {
+        // Create download link
+        const link = document.createElement('a');
+        link.download = `SGBVA-FreeGift-${name.replace(/\s+/g, '-')}.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+
+        // Hide container after download
+        setTimeout(() => {
+          container.classList.add('hidden');
+        }, 500);
+      }).catch(err => {
+        console.error('Screenshot error:', err);
+        alert('Gagal membuat screenshot. Silakan coba screenshot manual.');
+        container.classList.add('hidden');
+      });
+    }
   </script>
 </body>
 </html>

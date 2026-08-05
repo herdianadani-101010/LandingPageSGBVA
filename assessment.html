@@ -23,6 +23,8 @@
     }
   </script>
   <link rel="stylesheet" href="css/main.css">
+  <script src="config.js"></script>
+  <script src="registration.js"></script>
 </head>
 <body class="font-body bg-[#F9F9F9] text-slate-700 antialiased min-h-screen">
 
@@ -219,6 +221,9 @@
   </main>
 
   <script>
+    // Configuration from config.js
+    window.SGBVA_GAS_URL = window.SGBVA_CONFIG.gasUrl;
+
     // ============ QUESTIONS DATA ============
     const questions = [
       {
