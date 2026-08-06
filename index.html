@@ -187,11 +187,25 @@
   <nav id="navbar" class="sticky top-0 z-50 bg-brand-900/95 backdrop-blur-sm transition-all duration-300" role="navigation" aria-label="Navigasi utama">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="index-dani.html" class="flex items-center gap-2 group" aria-label="SGBVA Home">
-          <img src="sgbva1.png" alt="SGBVA" width="40" height="40" loading="eager" class="w-10 h-auto">
-          <span class="font-heading font-bold text-xl text-white">SGBVA</span>
+        <a href="/" class="flex items-center gap-2 group">
+          <img src="sgbva1.png" alt="SGBVA" style="height:40px;width:auto">
+          <span class="font-heading font-bold text-xl text-white transition-colors">SGBVA</span>
         </a>
-        <a href="#register" class="inline-flex items-center px-5 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all text-sm" aria-label="Daftar webinar gratis">
+        <!-- Journey Indicator -->
+        <div class="hidden md:flex items-center gap-3">
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-accent-500 rounded-full text-white text-xs font-bold shadow-lg shadow-accent-500/30">
+            <span>01</span> DISCOVER
+          </div>
+          <svg class="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white/15 rounded-full text-white/80 text-xs font-semibold border border-white/25">
+            <span>02</span> PREPARE
+          </div>
+          <svg class="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <div class="flex items-center gap-2 px-3 py-1.5 bg-white/15 rounded-full text-white/80 text-xs font-semibold border border-white/25">
+            <span>03</span> ACTION
+          </div>
+        </div>
+        <a href="#register" class="inline-flex items-center px-5 py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl transition-all text-sm">
           Daftar Gratis
         </a>
       </div>
@@ -255,19 +269,6 @@
               <a href="#register" class="btn-cta text-base sm:text-lg w-full sm:w-auto text-center">
                 DAFTAR SEKARANG — GRATIS
               </a>
-              <div class="hidden md:flex items-center gap-3">
-                <div class="flex items-center gap-2 px-3 py-1.5 bg-accent-500 rounded-full text-white text-xs font-bold shadow-lg shadow-accent-500/30">
-                  <span>01</span> DISCOVER
-                </div>
-                <svg class="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <div class="flex items-center gap-2 px-3 py-1.5 bg-white/15 rounded-full text-white/80 text-xs font-semibold border border-white/25">
-                  <span>02</span> PREPARE
-                </div>
-                <svg class="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <div class="flex items-center gap-2 px-3 py-1.5 bg-white/15 rounded-full text-white/80 text-xs font-semibold border border-white/25">
-                  <span>03</span> ACTION
-                </div>
-              </div>
               <div class="flex items-center gap-2 text-white/50 text-sm">
                 <span class="text-accent-400 font-bold text-lg">7</span> Sesi Interaktif
               </div>
