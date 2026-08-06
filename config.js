@@ -52,7 +52,7 @@ const SGBVA_CONFIG = {
   // Set false untuk mengikuti jadwal webinar
   // =====================================================
   freeGift: {
-    bypassTimeRestriction: false,  // true = buka kapan saja, false = ikuti jadwal
+    bypassTimeRestriction: true,  // true = buka kapan saja, false = ikuti jadwal
     openAfterWebinar: true,        // Buka otomatis setelah webinar selesai
     assessmentRequired: true       // Wajib selesai assessment dulu
   },
