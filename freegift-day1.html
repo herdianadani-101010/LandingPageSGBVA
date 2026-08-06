@@ -329,12 +329,14 @@
 
     function checkAccess() {
       const registered = localStorage.getItem('sgbva_registered_email');
-      if (!registered) return 'not_registered';
 
-      // Check if bypass time restriction is enabled in config
+      // Check if bypass time restriction is enabled in config (open access)
       if (window.SGBVA_CONFIG.freeGift.bypassTimeRestriction) {
         return 'accessible';
       }
+
+      // Require registration if bypass is disabled
+      if (!registered) return 'not_registered';
 
       // Check webinar schedule from config
       const isAccessible = window.SGBVA_CONFIG.isFreeGiftAccessible();
